@@ -1,0 +1,13 @@
+<div class="small-box" [ngClass]="data.cssClass">
+  <div class="inner">
+    <h3>{{ data.header }}</h3>
+
+    <p>{{ data.detail }}</p>
+  </div>
+  <div class="icon">
+    <i [ngClass]="data.icon"></i>
+  </div>
+  <a href="{{ data.footerLink }}" *ngIf="data.isFooter" class="small-box-footer"
+    >{{ data.footerText }} <i class="fas fa-arrow-circle-right"></i
+  ></a>
+</div>

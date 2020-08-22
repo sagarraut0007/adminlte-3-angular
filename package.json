@@ -60,7 +60,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "node ng-lint-staged.js dev:lint",
+      "node ng-lint-staged.js lint",
       "prettier --write"
     ]
   },

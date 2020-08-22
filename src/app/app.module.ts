@@ -19,6 +19,7 @@ import { AppButtonComponent } from './core/components/app-button/app-button.comp
 import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import { UserDropdownMenuComponent } from './features/main/header/user-dropdown-menu/user-dropdown-menu.component';
+import { WidgetSmallBoxComponent } from './core/components/widgets/widget-small-box/widget-small-box.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -34,6 +35,7 @@ registerLocaleData(localeEn, 'en-EN');
     NotificationsDropdownMenuComponent,
     AppButtonComponent,
     UserDropdownMenuComponent,
+    WidgetSmallBoxComponent,
   ],
   imports: [
     BrowserModule,
