@@ -31,7 +31,7 @@
               },
               { "glob": "favicon.ico", "input": "src/", "output": "/" }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/app/styles/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -97,7 +97,7 @@
               },
               { "glob": "favicon.ico", "input": "src/", "output": "/" }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/app/styles/styles.scss"],
             "scripts": []
           }
         },

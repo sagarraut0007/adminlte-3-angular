@@ -20,6 +20,9 @@ import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import { UserDropdownMenuComponent } from './features/main/header/user-dropdown-menu/user-dropdown-menu.component';
 import { WidgetSmallBoxComponent } from './core/components/widgets/widget-small-box/widget-small-box.component';
+import { MonthlyRecapReportComponent } from './features/dashboard/monthly-recap-report/monthly-recap-report.component';
+import { OnlineStoreVisitorsComponent } from './features/dashboard/online-store-visitors/online-store-visitors.component';
+import { SalesComponent } from './features/dashboard/sales/sales.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -36,6 +39,9 @@ registerLocaleData(localeEn, 'en-EN');
     AppButtonComponent,
     UserDropdownMenuComponent,
     WidgetSmallBoxComponent,
+    MonthlyRecapReportComponent,
+    OnlineStoreVisitorsComponent,
+    SalesComponent,
   ],
   imports: [
     BrowserModule,
