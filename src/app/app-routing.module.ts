@@ -4,6 +4,7 @@ import { MainComponent } from './features/main/main.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { NonAuthGuard } from './core/guards/non-auth.guard';
+import { AppDailySalesComponent } from './features/reports/app-daily-sales/app-daily-sales.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path: '',
         component: DashboardComponent,
+      },
+      {
+        path: 'dailysales',
+        component: AppDailySalesComponent,
       },
     ],
   },

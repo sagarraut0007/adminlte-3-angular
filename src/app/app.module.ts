@@ -23,6 +23,7 @@ import { WidgetSmallBoxComponent } from './core/components/widgets/widget-small-
 import { MonthlyRecapReportComponent } from './features/dashboard/monthly-recap-report/monthly-recap-report.component';
 import { OnlineStoreVisitorsComponent } from './features/dashboard/online-store-visitors/online-store-visitors.component';
 import { SalesComponent } from './features/dashboard/sales/sales.component';
+import { AppDailySalesComponent } from './features/reports/app-daily-sales/app-daily-sales.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -42,6 +43,7 @@ registerLocaleData(localeEn, 'en-EN');
     MonthlyRecapReportComponent,
     OnlineStoreVisitorsComponent,
     SalesComponent,
+    AppDailySalesComponent,
   ],
   imports: [
     BrowserModule,

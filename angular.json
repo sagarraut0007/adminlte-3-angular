@@ -32,7 +32,19 @@
               { "glob": "favicon.ico", "input": "src/", "output": "/" }
             ],
             "styles": ["src/app/styles/styles.scss"],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/app/scripts/ControlSidebar.js",
+              "src/app/scripts/Layout.js",
+              "src/app/scripts/PushMenu.js",
+              "src/app/scripts/Treeview.js",
+              "src/app/scripts/CardWidget.js",
+              "src/app/scripts/CardRefresh.js",
+              "src/app/scripts/Dropdown.js",
+              "src/app/scripts/Toasts.js",
+              "src/app/scripts/SiteSearch.js",
+              "src/app/scripts/Script.js"
+            ]
           },
           "configurations": {
             "production": {
