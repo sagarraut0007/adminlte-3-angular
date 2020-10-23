@@ -2,12 +2,13 @@
   "name": "chroniclebooks",
   "version": "0.1.0",
   "scripts": {
-    "start": "ng serve -o",
-    "build": "ng build",
+    "start": "ng serve -o --base-href=/Sales/",
+    "build": "ng build --base-href=/Sales/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "ng build --prod"
+    "build:qa": "ng build --base-href=/Sales/ --configuration qa",
+    "build:prod": "ng build --base-href=/Sales/ --prod"
   },
   "private": true,
   "dependencies": {

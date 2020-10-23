@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { JwtInterceptor } from '../app/core/interceptor/jwt.interceptor';
+import { ErrorInterceptor } from '../app/core/interceptor/error.interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,17 +51,23 @@ registerLocaleData(localeEn, 'en-EN');
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 10000,
-      positionClass: 'toast-bottom-right',
+      timeOut: 15000,
+      positionClass: 'toast-top-right',
       preventDuplicates: true,
+      enableHtml: true,
+      closeButton: true,
     }),
     NgbModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

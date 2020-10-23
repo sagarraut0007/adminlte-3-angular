@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SmallBox } from 'src/app/core/models/small-box-models';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ export class DashboardComponent implements OnInit {
   public revenueWidget: SmallBox;
   public salesWidget: SmallBox;
   public visitorsWidget: SmallBox;
-  constructor() {
+  constructor(private toastr: ToastrService) {
     this.newOrdersWidget = new SmallBox(
       '150',
       'New Orders',

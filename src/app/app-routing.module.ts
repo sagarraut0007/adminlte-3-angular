@@ -5,24 +5,27 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { NonAuthGuard } from './core/guards/non-auth.guard';
 import { AppDailySalesComponent } from './features/reports/app-daily-sales/app-daily-sales.component';
+const accountModule = () =>
+  import('./features/account/account.module').then((x) => x.AccountModule);
 
 const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    canActivate: [AuthGuard],
-    canActivateChild: [AuthGuard],
     children: [
       {
         path: '',
         component: DashboardComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'dailysales',
         component: AppDailySalesComponent,
+        canActivate: [AuthGuard],
       },
     ],
   },
+  { path: 'account', loadChildren: accountModule },
   { path: '**', redirectTo: '' },
 ];
 

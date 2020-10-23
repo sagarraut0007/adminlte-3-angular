@@ -6,7 +6,7 @@ import {
   ElementRef,
   Renderer2,
 } from '@angular/core';
-import { AppService } from '../../../../core/services/app.service';
+import { AccountService } from '../../../../core/services/account.service';
 
 @Component({
   selector: 'app-user-dropdown-menu',
@@ -27,11 +27,12 @@ export class UserDropdownMenuComponent implements OnInit {
   constructor(
     private elementRef: ElementRef,
     private renderer: Renderer2,
-    private appService: AppService
+    private accountService: AccountService
   ) {}
 
   ngOnInit(): void {
-    this.user = this.appService.user;
+    this.user = this.accountService.user;
+    this.user.image = 'assets/img/user2-160x160.jpg';
   }
 
   toggleDropdownMenu() {
@@ -51,6 +52,6 @@ export class UserDropdownMenuComponent implements OnInit {
   }
 
   logout() {
-    this.appService.logout();
+    this.accountService.logout();
   }
 }

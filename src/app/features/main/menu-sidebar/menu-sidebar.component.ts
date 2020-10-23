@@ -6,7 +6,6 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
-import { AppService } from '../../../core/services/app.service';
 
 @Component({
   selector: 'app-menu-sidebar',
@@ -16,7 +15,7 @@ import { AppService } from '../../../core/services/app.service';
 export class MenuSidebarComponent implements OnInit, AfterViewInit {
   @ViewChild('mainSidebar', { static: false }) mainSidebar;
   @Output() mainSidebarHeight: EventEmitter<any> = new EventEmitter<any>();
-  constructor(public appService: AppService) {}
+  constructor() {}
 
   ngOnInit() {}
 

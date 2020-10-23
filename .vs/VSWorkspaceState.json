@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\assets",
+    "\\src\\app\\assets\\img",
+    "\\src\\app\\core",
+    "\\src\\app\\core\\components",
+    "\\src\\app\\features",
+    "\\src\\app\\features\\account",
+    "\\src\\app\\features\\account\\login",
+    "\\src\\app\\features\\main\\header\\user-dropdown-menu"
+  ],
+  "SelectedNode": "\\src\\app\\features\\account\\login\\login.component.ts",
+  "PreviewInSolutionExplorer": false
+}
